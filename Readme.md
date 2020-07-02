@@ -1,5 +1,5 @@
 # Sourdoh
-Simple Arduino build with NodeMCU ESP8266, DHT11 temperature and humidity sensor, and SR04 proximity sensor. 
+Simple Arduino build with **NodeMCU ESP8266**, **DHT11** temperature and humidity sensor, and **SR04** proximity sensor. 
 Sends results to Azure Iot Hub (`sourdoh.azureiot`) or to a local Rest service (`sourdoh.local` and `sourdoh.api`).
 
 #### Wiring
@@ -22,3 +22,23 @@ Sends results to Azure Iot Hub (`sourdoh.azureiot`) or to a local Rest service (
 * Screw on jar cap, crude holes cut with utility knife, secured with shoe goo ;)
 
 ![Build](https://github.com/jeffbrock/sourdoh/blob/master/readme/IMG_20200702_081934.jpg)
+
+#### Code
+* Arduino IDE 1.8.13 (https://www.arduino.cc/)
+  * NodeMCU Board Manager (http://arduino.esp8266.com/stable/package_esp8266com_index.json)
+  * DHT Sensor Library 1.3.10
+* Azure Hub Version - `sourdoh.azureiot`
+  * Requires:
+    * AzureIoTHub 1.0.45
+    * AzureIoTProtocol_HTTP 1.0.45
+    * AzureIoTUtility 1.0.4.5
+  * Set variables:
+    * IOT_CONFIG_WIFI_SSID            
+    * IOT_CONFIG_WIFI_PASSWORD        
+    * IOT_CONFIG_CONNECTION_STRING    
+* Local Rest Version - `sourdoh.local` and `sourdoh.api`
+  * Set variables:
+    * LOCAL_SSID
+    * PASSWORD
+    * HOST
+    * PORT
